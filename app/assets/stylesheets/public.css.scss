@@ -1,0 +1,184 @@
+/* custom variables >>> */ 
+$altColor: #900; //red 
+/* <<< custom variables */ 
+$bodyBackgroundColor: #F8F8F8;
+
+// Typography
+$baseFontFamily: "garamond-premier-pro-caption", "Georgia", serif; 
+$baseFontSize: 10px;
+$baseLineHeight: 24px;
+$textColor: #4C4C4C;
+
+$headingTextColor: #191919;
+
+// Navbar
+$navbarBackgroundHighlight: #F8F8F8;
+$navbarBackground: #F8F8F8;
+$navbarButtonBackgroundHighlight: black; 
+$navbarButtonBackground: black; 
+$navbarButtonIconBarColor: white;
+
+
+ 
+// Links
+$linkColor: #ADADAD;
+$linkColorHover: #191919;
+
+// Import
+@import "gko_public_all"; 
+@import "gko/elastislide"; 
+
+/*-----------------------------------------
+   SHARED STYLES 
+----------------------------------------- */ 
+.uppercase_font_style {
+	line-height: 24px;
+	font-size: 13px;
+	letter-spacing: 1px; 
+	text-transform: uppercase; 
+}
+
+/*-----------------------------------------
+ TYPOGRAPHY 
+----------------------------------------- */
+h1 {
+	font-size: 12px;
+	line-height: 70px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-align: center;
+	letter-spacing: 3px;
+}
+h2 {
+	font-size: 12px;
+	font-style: italic;
+	line-height: 70px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-align: center;
+	letter-spacing: 3px;
+}
+h3 {
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 70px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-align: center;
+	letter-spacing: 3px;
+}
+h4 {
+	font-size: 12px;
+	font-weight: normal;
+	font-style: italic;
+	line-height: 70px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-align: center;
+	letter-spacing: 3px;
+}
+/*-----------------------------------------
+   OVERWRITTE
+----------------------------------------- */
+.html_text {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	p, ul {
+		font-weight: 300;
+	}
+	p {
+		margin-bottom: $baseLineHeight * 2;
+		@include columns(50%, 2, 50px, #ccc, dotted);
+	}
+}
+/*-----------------------------------------
+   STRUCTURE
+----------------------------------------- */ 
+body {
+	display: none;
+}
+/*-----------------------------------------
+   SLIDESHOW
+----------------------------------------- */ 
+.diaporama {
+	background-color: white;
+	padding:18px;
+	border: 1px solid #B7B6B6;
+}
+.image-large-wrapper {
+	a.image-large-nav {
+		top: 50%;
+		left: 8px;
+		background: #FFF asset_url("icons.png", image) no-repeat 0 0;
+		@include circle(30px);
+		opacity: .7;
+		&:hover {
+			opacity: 1;
+		};
+	}
+	a.image-large-nav.image-large-nav-next{
+		right:8px;
+		background-position: -28px 0;
+	}
+} 
+
+/*-----------------------------------------
+ HEADER
+----------------------------------------- */
+
+.navbar .brand {
+	@include logo(200px, 80px);
+	float: left;
+	
+}
+.navbar {
+	border-top: 3px solid #B7B6B6;
+}
+.header-nav {
+	border-bottom: 1px solid #B7B6B6; 
+	padding: $baseLineHeight * 1.5 0;
+
+	@include clearfix;
+	.nav > li { 
+		.text {
+			padding-left: 16px;
+		}
+		.icon {
+			display: inline-block;
+			width:21px;
+			height: 4px;
+			background: transparent asset-url("nav-dot.png", image) 0 0 no-repeat;
+		} 
+		&:first-child { 
+			background: none;
+			padding-left: 0;
+			.text {
+				padding-left: 0; 
+			}
+			.icon {
+				display: none;
+			} 
+		}
+	}	
+	.nav > li > a {
+		text-transform: uppercase;
+		font-size: 11px;
+		font-weight: normal;
+		letter-spacing: 2px;
+		line-height: 28px;
+	}
+	nav {
+		float: right;
+	}
+}
+
+
+/*-----------------------------------------
+ RESPONSIVE
+----------------------------------------- */
+@import "gko/responsive";
+
+
+// LANDSCAPE PHONE TO SMALL DESKTOP & PORTRAIT TABLET
+// --------------------------------------------------
+

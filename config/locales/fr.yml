@@ -1,0 +1,49 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+fr:
+  home: "<h3>Design et Communication</h3><p>Implantée à Saint Barthélemy, l'agence a été créée en avril 2005 par Jean-François Tricot, rejoint en 2007 par Régis Bruggheman. La complémentarité de leurs parcours et de leurs expertises permet à Jouf Design d'intervenir dans l'ensemble des problématique de Design et de Communication des entreprises et des institutions.</p><h3>Cohérence et sens !</h3><p>Pour Jouf Design, la marque est au coeur de la stratégie d'image et de communication. Pour des marques fortes, la cohérence des supports d'expression est de mise : cohérence graphique et cohérence stratégique pour des actions de communication qui ont du sens.</p><h3>Créativité !</h3><p>La créativité que nous revendiquons, c'est à la fois celle du design et celle de la détermination des outils et des actions de communication.</p>"
+  pack:
+    iv:
+      title: "Créateurs de marques !"
+      quote: "Depuis 2005, nous créons vos marques"
+      desc: "<p>Jouf Design crée l'identité visuelle de votre marque<br/><ul><li>création du logotype</li><li>définition du territoire graphique</li><li>charte graphique</li></ul></p>"
+      link: "Voir le portfolio"
+      detail_url: "portfolio"
+      
+    villa:
+      title: "Pack Site Villa"
+      quote: "Votre site de villa avec CMS à partir de 2700&nbsp;€"
+      desc: "<p>Louez en direct !<br/>Création de votre site internet de villa avec un CMS simple et complet pour gérer vos textes, images et pages en toute autonomie.</p><ul><li>nombre de page illimité</li><li>bilingue FR / US</li><li>galeries photos</li><li>formulaire de réservation</li><li>lisible sur iPad</li><li>version iPhone inclue</li></ul><p class='pack-price'>À partir de 2700&nbsp;€</p>"
+      link: "Voir le détail du Pack Villa"
+      detail_url: "http://creation-site-internet.joufdesign.com/offres-packages-metiers/pack-site-cms-villa"
+
+
+    hotel: 
+      title: "Pack Site Hôtel"
+      quote: "Votre site d'hôtel avec CMS à partir de 4450&nbsp;€"
+      desc: "<p>Modernisez votre site internet d'hôtel et optimisez vos budgets en gérant les contenus vous-même avec notre CMS simple et complet.</p><ul><li>nombre de page illimité</li><li>bilingue FR / US</li><li>gérez les tarifs par saison et vos packages</li><li>formulaire de réservation</li><li>lisible sur iPad</li><li>version iPhone inclue</li></ul><p class='pack-price'>À partir de 4450&nbsp;€</p>"
+      link: "Voir le détail du Pack Hôtel"
+      detail_url: "http://creation-site-internet.joufdesign.com/offres-packages-metiers/pack-site-cms-hotel"
+
+    table: 
+      title: "Pack Site Restaurant"
+      quote: "Votre site de restaurant avec CMS à partir de 2450&nbsp;€"
+      desc: "<p>Créez le site internet de votre restaurant et gérez les contenus en toute autonomie avec notre CMS simple et complet.</p><ul><li>nombre de page illimité</li><li>bilingue FR / US</li><li>gérez les cartes et les menus</li><li>formulaire de réservation</li><li>lisible sur iPad</li><li>version iPhone inclue</li></ul><p class='pack-price'>À partir de 2450&nbsp;€</p>"
+      link: "Voir le détail du Pack Restaurant"
+      detail_url: "http://creation-site-internet.joufdesign.com/offres-packages-metiers/pack-site-cms-restaurants"
+    
+    realty: 
+      title: "Pack Site Immobilier"
+      quote: "Votre site d'agence immobilière avec CMS à partir de 4450&nbsp;€"
+      desc: "<p>Modernisez le site internet de votre agence immobilière et gérez vos pages villas en toute autonomie avec notre CMS simple et complet.</p><ul><li>nombre de page illimité (vente et location)</li><li>bilingue FR / US</li><li>gérez les tarifs par saison et par chambres</li><li>formulaire de réservation</li><li>lisible sur iPad</li><li>version iPhone inclue</li></ul><p class='pack-price'>À partir de 4450&nbsp;€</p>"
+      link: "Voir le détail du Pack Immo"
+      detail_url: "http://creation-site-internet.joufdesign.com/offres-packages-metiers/pack-site-cms-agence-immobiliere"
+   
+    shop:
+      title: "Pack site e-commerce"
+      quote: "Votre boutique en ligne avec CMS à partir de 4450&nbsp;€"
+      desc: "<p>Créez votre boutique en ligne et gérez vos pages villas en toute autonomie avec notre CMS simple et complet.</p><ul><li>nombre de produits illimité</li><li>paiement par CB avec votre compte Paypal</li><li>lisible sur iPad</li><li>version iPhone inclue</li></ul><p class='pack-price'>À partir de 4450&nbsp;€</p>"
+      link: "Voir le détail du Pack E-Commerce"
+      detail_url: "http://creation-site-internet.joufdesign.com/offres-packages-metiers/pack-site-cms-e-commerce"
+                                                           

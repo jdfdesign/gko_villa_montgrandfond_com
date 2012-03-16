@@ -1,0 +1,13 @@
+cd ~/developer/workspace/gko_villa_montgrandfond_com
+bundle install
+rails s
+
+bundle exec rake assets:precompile
+
+bundle exec rake railties:install:migrations
+bundle exec rake db:bootstrap
+
+ 
+bundle exec rake db:admin:create
+bundle exec rake db:load_default 
+bundle exec rake db:load_sample  
