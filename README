@@ -1,13 +1,20 @@
 cd ~/developer/workspace/gko_villa_montgrandfond_com
+tail -f log/development.log
+
+cd ~/Github/gko_villa_montgrandfond_com
 bundle install
 rails s
 
+cd ~/Github/gko_villa_montgrandfond_com
+rails s
+
+bundle exec rake assets:precompile RAILS_ENV=production
+bundle exec rake assets:precompile RAILS_ENV=development
 bundle exec rake assets:precompile
 
 bundle exec rake railties:install:migrations
 bundle exec rake db:bootstrap
 
- 
 bundle exec rake db:admin:create
 bundle exec rake db:load_default 
-bundle exec rake db:load_sample  
+bundle exec rake db:load_sample

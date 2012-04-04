@@ -4,8 +4,8 @@ $altColor: #900; //red
 $bodyBackgroundColor: #F8F8F8;
 
 // Typography
-$baseFontFamily: "garamond-premier-pro-caption", "Georgia", serif; 
-$baseFontSize: 10px;
+$baseFontFamily: "futura-pt", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+$baseFontSize: 12px;
 $baseLineHeight: 24px;
 $textColor: #4C4C4C;
 
@@ -18,10 +18,8 @@ $navbarButtonBackgroundHighlight: black;
 $navbarButtonBackground: black; 
 $navbarButtonIconBarColor: white;
 
-
- 
 // Links
-$linkColor: #ADADAD;
+//$linkColor: #ADADAD;
 $linkColorHover: #191919;
 
 // Import
@@ -61,7 +59,7 @@ h2 {
 h3 {
 	font-size: 12px;
 	font-weight: normal;
-	line-height: 70px;
+	line-height: 24px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	text-align: center;
@@ -83,12 +81,13 @@ h4 {
 .html_text {
 	text-transform: uppercase;
 	letter-spacing: 2px;
+	text-align: center;
 	p, ul {
 		font-weight: 300;
 	}
 	p {
-		margin-bottom: $baseLineHeight * 2;
-		@include columns(50%, 2, 50px, #ccc, dotted);
+		margin-bottom: $baseLineHeight;
+	//	@include columns(50%, 2, 50px, #ccc, dotted);
 	}
 }
 /*-----------------------------------------
@@ -104,19 +103,19 @@ body {
 	background-color: white;
 	padding:18px;
 	border: 1px solid #B7B6B6;
+	margin-bottom: $baseLineHeight;
 }
-.image-large-wrapper {
-	a.image-large-nav {
-		top: 50%;
-		left: 8px;
-		background: #FFF asset_url("icons.png", image) no-repeat 0 0;
-		@include circle(30px);
-		opacity: .7;
-		&:hover {
-			opacity: 1;
-		};
+.carousel-control {
+	top: 50%;
+	background: #FFF asset_url("icons.png", image) no-repeat 0 0;
+	@include circle(30px);
+	opacity: .7;
+	text-indent: -9999px;
+	border: none;
+	&:hover {
+		opacity: 1;
 	}
-	a.image-large-nav.image-large-nav-next{
+	&.right {
 		right:8px;
 		background-position: -28px 0;
 	}
@@ -126,26 +125,53 @@ body {
  HEADER
 ----------------------------------------- */
 
-.navbar .brand {
-	//@include logo(200px, 80px);
-	float: left;
-	
-}
 .navbar {
 	border-top: 3px solid #B7B6B6;
 }
+
+
 .header-nav {
 	border-bottom: 1px solid #B7B6B6; 
-	padding: $baseLineHeight * 1.5 0;
-
-	@include clearfix;
-	.nav > li { 
+	padding-top: $baseLineHeight * 1.5;
+}
+.navbar .dropdown-menu a,
+.header-nav .nav > li > a {
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: normal;
+	letter-spacing: 2px;
+	line-height: 28px;
+}
+/*-----------------------------------------
+ RESPONSIVE
+----------------------------------------- */
+@import "gko/responsive";
+@media (min-width: 981px) {
+	/*-----------------------------------------
+	 HEADER
+	----------------------------------------- */ 
+	.navbar-inner {
+	  background-image: none;
+	  background: none; 
+	}
+	.navbar .brand {
+		width: 100%;
+		a {
+			@include center-block;
+			text-align: center;
+		}
+		
+	}
+	.navbar .header-nav nav {
+		@include center-nav;  
+	}
+	.navbar .header-nav .nav > li { 
 		.text {
 			padding-left: 16px;
 		}
 		.icon {
 			display: inline-block;
-			width:21px;
+			width:20px;
 			height: 4px;
 			background: transparent asset-url("nav-dot.png", image) 0 0 no-repeat;
 		} 
@@ -159,26 +185,32 @@ body {
 				display: none;
 			} 
 		}
-	}	
-	.nav > li > a {
-		text-transform: uppercase;
-		font-size: 11px;
-		font-weight: normal;
-		letter-spacing: 2px;
-		line-height: 28px;
 	}
-	nav {
-		float: right;
+	.navbar .header-nav .nav > li > a { 
+		padding: 10px 0px 11px 10px;
+	}
+	.navbar .nav-collapse {
+		margin-top:10px;
+		@include clearfix;
+		padding-top:10px;
+	}
+	
+	/*-----------------------------------------
+	 FOOTER
+	----------------------------------------- */
+	#footer {
+		border-top: 1px solid #B7B6B6; 
+		padding-bottom: $baseLineHeight * .5;
+		padding-top: $baseLineHeight * .5;
+		nav {
+			@include clearfix;
+			@include center-nav;
+		}
+		.nav > li > a  {
+			font-weight: normal;
+			font-size: 9px;
+			letter-spacing: 1px; 
+			text-transform: uppercase;
+		}
 	}
 }
-
-
-/*-----------------------------------------
- RESPONSIVE
------------------------------------------ */
-@import "gko/responsive";
-
-
-// LANDSCAPE PHONE TO SMALL DESKTOP & PORTRAIT TABLET
-// --------------------------------------------------
-
