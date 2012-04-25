@@ -1,19 +1,16 @@
 /* custom variables >>> */ 
 $altColor: #900; //red 
 /* <<< custom variables */ 
-$bodyBackgroundColor: #F8F8F8;
+$bodyBackgroundColor: #F5F3ED;
 
 // Typography
 $baseFontFamily: "futura-pt", "Helvetica Neue", Helvetica, Arial, sans-serif; 
 $baseFontSize: 12px;
 $baseLineHeight: 24px;
 $textColor: #4C4C4C;
-
 $headingTextColor: #191919;
 
 // Navbar
-$navbarBackgroundHighlight: #F8F8F8;
-$navbarBackground: #F8F8F8;
 $navbarButtonBackgroundHighlight: black; 
 $navbarButtonBackground: black; 
 $navbarButtonIconBarColor: white;
@@ -105,31 +102,24 @@ body {
 	border: 1px solid #B7B6B6;
 	margin-bottom: $baseLineHeight;
 }
-.carousel-control {
-	top: 50%;
-	background: #FFF asset_url("icons.png", image) no-repeat 0 0;
-	@include circle(30px);
-	opacity: .7;
-	text-indent: -9999px;
-	border: none;
-	&:hover {
-		opacity: 1;
-	}
-	&.right {
-		right:8px;
-		background-position: -28px 0;
-	}
-} 
-
 /*-----------------------------------------
  HEADER
 ----------------------------------------- */
 
-.navbar {
-	border-top: 3px solid #B7B6B6;
+body {
+	border-top: 3px solid #5d5b59;
 }
-
-
+#locales.nav {
+	background-color: #5d5b59;
+	color: #fff;
+	@include corner-bottom(4px);	
+}
+ .navbar .header-top #locales.nav > li > a {
+	color: #fff;
+	&:hover {
+		color: #fff;	
+	};
+}
 .header-nav {
 	border-bottom: 1px solid #B7B6B6; 
 	padding-top: $baseLineHeight * 1.5;
@@ -146,7 +136,7 @@ body {
  RESPONSIVE
 ----------------------------------------- */
 @import "gko/responsive";
-@media (min-width: 981px) {
+@media (min-width: 980px) {
 	/*-----------------------------------------
 	 HEADER
 	----------------------------------------- */ 
@@ -184,6 +174,14 @@ body {
 			.icon {
 				display: none;
 			} 
+		}
+	}
+	.navbar .header-nav .nav > li .dropdown-menu > a {
+		.text {
+			padding-left: 0; 
+		}
+		.icon {
+			display: none;
 		}
 	}
 	.navbar .header-nav .nav > li > a { 
