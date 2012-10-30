@@ -13,6 +13,8 @@ bundle exec rake assets:precompile RAILS_ENV=development
 bundle exec rake assets:precompile
 
 bundle exec rake railties:install:migrations
+bundle exec rake db:migrate
+
 bundle exec rake db:bootstrap
 
 bundle exec rake db:admin:create

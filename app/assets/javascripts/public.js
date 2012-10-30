@@ -120,8 +120,6 @@ var Carousel = {
 		            this.bind('loadfinish', function (e) {
 		                this.$('loader').fadeOut(200);
 		            });
-
-					this.enterFullscreen();
 		        }
 		    });
 	} 
