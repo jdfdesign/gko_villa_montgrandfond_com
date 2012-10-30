@@ -7,6 +7,21 @@ var Site = {
 		$window = $(window);
 		Carousel.addTheme();
 		Carousel.init();
+		$window.on("throttledresize", Site.onResize );
+	},
+	onResize: function() {
+		isMobile = ($window.width() < 980);
+		if(isMobile) {
+			$('.galleria').css({
+				maxHeight: 'auto'
+			});
+		} else {
+			var h = $window.height();
+			var maxCarouselHeight = $('.galleria').length ? h - $('.galleria').position().top - 100 : h;
+			$('.galleria-container').css({
+				maxHeight: maxCarouselHeight
+			});
+		}
 	}
 }
 
@@ -14,6 +29,7 @@ var Carousel = {
 	init: function() {
 		if($(".galleria").length > 0) {
 			$(".galleria").galleria({
+				debug: false,
 				autoplay: true,
 				responsive: true,
 				height: .55,
@@ -22,7 +38,7 @@ var Carousel = {
 				thumbMargin: 10,
 				showCounter: false,
 				showInfo: false,
-				thumbnails: 'empty'
+				thumbnails: $(".galleria").children().length > 1 ? 'empty' : false
 			})
 		}
 	},

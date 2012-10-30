@@ -23,7 +23,9 @@ body {
  padding-right: 0px;
  padding-left: 0px;
 }
-
+.page-title {
+	text-transform: capitalize;
+}
 #page-content {
 	max-width: 680px;
 	padding-top: $baseLineHeight * 2;
@@ -52,6 +54,7 @@ body {
 .navbar .nav > li > a {
 	text-shadow: none;
 	font-weight: bold;
+	text-transform: capitalize;
 }
 .navbar .btn-navbar {
 	color: $white;
@@ -74,12 +77,13 @@ body {
 	}
 	.nav > li > a {
 		text-shadow: none;
+		text-transform: capitalize;
 	}
 }
 #copyright-container {
 	background-color: $white;
 }
-#site_by {
+#site-by {
 	float:right;
 	color: $gray;
 	text-decoration: none;

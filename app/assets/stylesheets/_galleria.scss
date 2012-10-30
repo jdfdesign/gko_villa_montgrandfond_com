@@ -153,26 +153,52 @@
     height: 31px;
     left: 0;
 }
-
+// Left/right controls for nav
+// ---------------------------
+.galleria-image-nav-left:before {
+	content: "\2039";
+}
+.galleria-image-nav-right:before {
+	content: "\203A";
+}
 .galleria-image-nav-left,
 .galleria-image-nav-right {
-    @include opacity(30);
-    cursor: pointer;
-    width: 62px;
-    height: 62px;
-    position: absolute;
-    left: 0px;
-    z-index: 2;
-    background-position: 0 23px;
-	background-color: $black;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 10px;
+  width: 60px;
+  height: 60px;
+  margin-top: -30px;
+  font-size: 60px;
+  font-weight: 100;
+  line-height: 50px;
+  color: black;
+  text-align: center;
+  background: white;
+  opacity: .5;
+  filter: alpha(opacity=50);
+  cursor: pointer;
+
+  // we can't have this transition here
+  // because webkit cancels the carousel
+  // animation if you trip this while
+  // in the middle of another animation
+  // ;_;
+  // .transition(opacity .2s linear);
+}
+  // Hover state
+.galleria-image-nav-left,
+.galleria-image-nav-right:hover {
+    color: black;
+	opacity: .9;
+	filter: alpha(opacity=90);
+}
+.galleria-image-nav-right{
+	left: auto;
+    right: 10px;
 }
 
-.galleria-image-nav-right {
-    left: auto;
-    right: 0px;
-    background-position: -254px 23px;
-    z-index: 2;
-}
 
 .notouch .galleria-image-nav-left:hover,
 .notouch .galleria-image-nav-right:hover {
