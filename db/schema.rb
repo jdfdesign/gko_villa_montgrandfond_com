@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121019123681) do
+ActiveRecord::Schema.define(:version => 20121105012641) do
 
   create_table "accounts", :force => true do |t|
     t.string   "reference",  :limit => 40
@@ -404,7 +404,7 @@ ActiveRecord::Schema.define(:version => 20121019123681) do
     t.boolean  "shallow_permalink", :default => true
     t.boolean  "robot_index",       :default => true
     t.boolean  "robot_follow",      :default => true
-    t.string   "password"
+    t.boolean  "restricted",        :default => false
   end
 
   add_index "sections", ["link_id", "link_type"], :name => "index_sections_on_link_id_and_link_type"

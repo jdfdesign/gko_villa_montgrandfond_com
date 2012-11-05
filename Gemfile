@@ -8,7 +8,7 @@ group :assets do
  gem 'uglifier', '>= 1.0.3'
 end
 prod_location = 'git@github.com:jdfdesign/gko_cms3.git'
-prod_version = "= 0.4.25"
+prod_version = "= 0.4.31"
 group :production do
 	gem "gko_core", prod_version, :git => prod_location
 	gem "gko_auth", prod_version, :git => prod_location

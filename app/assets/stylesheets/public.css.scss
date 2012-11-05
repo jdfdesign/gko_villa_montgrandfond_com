@@ -94,6 +94,14 @@ body {
 		text-decoration: none;
 	};
 }
+
+
+@media (max-width: 767px) {
+	.galleria-thumbnails-container,
+	.galleria-image-nav {
+		display: none;
+	}
+}
 @media (max-width: 979px) {
 	.navbar .brand {
 		float: none;
