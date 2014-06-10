@@ -1,1 +1,15 @@
-/Users/bruggheman/Github/gko_architectonik_com/app/views/layouts/application.html.erb
+<!DOCTYPE html>
+<html class="no-js">
+<%= render 'head' %>
+<body>
+  <div class="th-page-wrapper">
+    <%= yield :header if content_for?(:header) %>
+    <%= render 'navbar' %>
+    <%= yield %>
+    <%= render 'footer' %>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <%= render 'javascripts' %> 
+</body>  
+</html>
