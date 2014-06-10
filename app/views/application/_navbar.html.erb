@@ -1,0 +1,22 @@
+<%# cache([site, I18n.locale, 'header']) do %>
+<!-- Begin Header -->
+<header class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <%= link_to(root_url, :class => "navbar-brand") do %>
+        <% image_tag("logo.png") %>
+      <% end %>
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <%= render "locales_select" %>
+    <nav class="collapse navbar-collapse navbar-right">
+      <%= render 'menu', :sections => site.primary_menu, :menu_name => 'navbar-nav' %>
+    </nav>
+  </div>
+</header>
+<%# end %>

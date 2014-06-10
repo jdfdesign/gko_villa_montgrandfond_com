@@ -1,166 +1,61 @@
-/*-----------------------------------------
- SPECIFIC VARIABLES
------------------------------------------ */
-// add specific variables here if any
-$altDarkColor: #41281B;
-$altColor: #673b15;
-// Import
-@import "variables";
-@import "twitter.bootstrap.2.0.4/bootstrap";
-@import "gko/public/base";
-@import "galleria";
+$th-body-color: #fff;
+$th-text-color: #333;
+$th-primary-color: #673b15;
+$th-footer-height: 60px;
 
-/*-----------------------------------------
- RESPONSIVE
------------------------------------------ */
-@import "twitter.bootstrap.2.0.4/bootstrap/responsive";
-@import "gko/default_responsive";
+@import "theme/variables";
+@import "bootstrap.3.1.1/bootstrap.scss";
+@import "theme/patch";
+@import "galleria";
+//@import "theme/form";
+@import "theme/navbar";
+//@import "theme/carousel";
+@import "theme/footer";
+
+// Color for the js placeholder plugin
+.placeholder {
+  color: $input-color-placeholder;
+}
 
 body {
-	background: $bodyBackground image-url("concrete_wall_3.png") top left repeat;
-}
-.container-fluid {
- padding-right: 0px;
- padding-left: 0px;
-}
-.page-title {
-	text-transform: capitalize;
-}
-#page-content {
-	max-width: 680px;
-	padding-top: $baseLineHeight * 2;
-	padding-bottom: $baseLineHeight * 2;
-	@include box-sizing(border-box);
-	@include center-block();
+	background: $th-body-color image-url("concrete_wall_3.png") top left repeat;
 }
 
-.navbar .brand {
-	text-align: center;
-	padding: 12px 20px;
-	a {
-		padding: 0;
-		margin: 0;
-		background: transparent image-url("logo.png") center center no-repeat;
-		background-size: contain;
-		cursor: pointer;
-		text-decoration: none;
-		display: block;
-		width: 288px;
-		height: 80px;
-		@include hide-text;
-		
-	}
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  text-transform: capitalize;
 }
-.navbar .nav > li > a {
-	text-shadow: none;
-	font-weight: bold;
-	text-transform: capitalize;
-}
-.navbar .btn-navbar {
-	color: $white;
-	@include buttonBackground($altDarkColor, $altColor);
-}
-.navbar .btn-navbar:hover {
-	color: $white;	
-}
-// Active state
-.navbar .btn-navbar.active,
-.navbar .btn-navbar:active {
-  color: $white;
-}
-#footer-container {
-	background-color: $white;
-	padding-top: $baseLineHeight * 2;
-	border-top: 1px solid $grayLighter;
-	.nav {
-		float:right;
-	}
-	.nav > li > a {
-		text-shadow: none;
-		text-transform: capitalize;
-	}
-}
-#copyright-container {
-	background-color: $white;
-}
-#site-by {
-	float:right;
-	color: $gray;
-	text-decoration: none;
-	margin: 0 18px 0 0;
-	font-size: 10px;
-	&:hover {
-		color: $black;
-		text-decoration: none;
-	};
+
+.copy-text {
+  font-size: 16px;
+  table {
+    @extend .table;
+  }
 }
 
 
-@media (max-width: 767px) {
-	.galleria-thumbnails-container,
-	.galleria-image-nav {
-		display: none;
-	}
+//
+// -- Keep footer at bottom on small page
+//
+html,
+body {
+  margin:0;
+  padding:0;
+  height:100%; 
 }
-@media (max-width: 979px) {
-	.navbar .brand {
-		float: none;
-		text-align: center;
-	
-	}
-	.navbar-inner {
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-	.nav-collapse {
-		background-color: $altDarkColor;
-	}
-	
-	.nav-collapse nav,
-	.nav-collapse .nav {
-		@include clearfix();
-	}
-	.nav-collapse .nav > li,
-	.nav-collapse .dropdown-menu li {
-		border-bottom: 1px solid $altColor;
-	}
-	
-	.nav-collapse .dropdown-menu li:first-child {
-		border-top: 1px solid $altColor;
-	}
-	.nav-collapse .nav > li > a,
-	.nav-collapse .dropdown-menu li + li a {
-		margin-bottom: 0;
-	}
-	
-	.nav-collapse .dropdown-menu li:last-child {
-		border-bottom: none;
-	}
-	.nav-collapse .nav > li > a,
-	.nav-collapse .dropdown-menu a {
-		font-weight: normal;
-		@include border-radius(0);
-		color: $white;
-		&:hover {
-			color: $white;
-			background-color: $altColor;
-		};
-	}
+  
+.th-page-wrapper {
+  min-height:100%;
+  position:relative;
+  padding-bottom: $th-footer-height;
 }
-@media (min-width: 980px) {
 
-	.navbar {
-		margin-bottom: 0px;
-		.nav {
-			float: right;
-			left: auto;
-			> li > a {
-				padding: 42px 12px 43px;
-			}
-			.dropdown-menu {
-				top: 72%;
-			}
-		}
-		
-	}
+.th-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto; /* Height of the footer - Adjusted by js */
 }
+
+

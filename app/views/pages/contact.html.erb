@@ -1,15 +1,14 @@
-<% @body_id = "inquiry" %>
-<article class='page'>
-	<div id="page-images" class='row-fluid'>
-		<div class="span12">
-		<%= render_slideshow_for(resource) %>
-		</div>
-	</div>
-	<div id="page-content" class='row-fluid'>
-	  <div class='span12'>
-	    <%= render_page_title(resource.title) %>
-	    <%= render_html_text(resource.body) %>
-	    <%= render("inquiries/form") %>
-	  </div>
-	</div>
-</article>
+<%# resource_cache(resource) do %>
+  <article class="<%= resource_instance_name %>">
+    <%= render_slideshow_for(resource) %>
+    <div class="container"> 
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+        <%= render_page_title(resource.title) if resource.show_title_in_page %>
+        <%= render_copy_text(resource.body) %>
+        <%= render("inquiries/form") %>
+        </div> 
+      </div>
+    </div>
+	</article>
+<%# end %>  

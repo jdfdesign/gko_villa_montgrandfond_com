@@ -1,0 +1,87 @@
+.carousel {
+  margin: 0;
+  height: 600px;
+  width: 100%;
+  
+}
+
+// Left/right controls for nav
+// ---------------------------
+.carousel-control {
+  background-color: $th-primary-color;
+  @include square(24px);
+  border-radius: 12px;
+  top: auto;
+  right: 24px;
+  left: auto;
+  bottom: 24px;
+  background-image: none;
+  &.carousel-control-left {
+    right: 66px;
+    
+  }
+}
+
+.carousel-control {
+
+  font-size: $carousel-control-font-size;
+  color: $carousel-control-color;
+  text-align: center;
+  text-shadow: $carousel-text-shadow;
+
+  // Hover/focus state
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $carousel-control-color;
+    text-decoration: none;
+    @include opacity(.9);
+  }
+
+  // Toggles
+  .carousel-control-icon-left,
+  .carousel-control-icon-right {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+  }
+
+  .carousel-control-icon {
+    width:  20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+  }
+}
+
+.carousel-indicators {
+  display: none;
+  li {
+    border-radius: none;
+    width:  38px;
+    height: 4px;
+  }
+  .active {
+    width:  40px;
+    height: 6px;
+  }
+}
+
+.carousel-caption {
+  background-color: #fff;
+}
+
+.carousel-inner {
+  height:100%;
+  width: 100%;
+  > .item {
+    height:100%;
+    width: 100%;
+    background-size: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+  }
+}

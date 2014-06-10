@@ -1,6 +1,8 @@
 cd ~/Github/gko_villa_montgrandfond_com
 tail -f log/development.log
 
+
+rvm use 1.8.7 --default
 cd ~/Github/gko_villa_montgrandfond_com
 bundle install
 rails s

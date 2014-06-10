@@ -1,0 +1,27 @@
+//
+// Theme Navbar
+// --------------------------------------------------
+.navbar-brand {
+  //font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  width: 200px;
+  height: $navbar-height;
+  display: table;
+  padding-top: 0;
+  padding-bottom: 0;
+  @include transition(all .3s ease);
+  > img {
+    height: 90%;
+    max-width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+.navbar-nav {
+  > li > a {
+    text-transform: capitalize;
+    font-size: 12px;
+  }
+}

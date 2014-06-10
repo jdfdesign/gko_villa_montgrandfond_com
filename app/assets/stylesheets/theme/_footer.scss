@@ -1,0 +1,43 @@
+//
+// Theme Footer
+// --------------------------------------------------
+
+.th-footer {
+  margin-top: $line-height-computed * 2;
+  padding: $line-height-computed 0;
+	background-color: #fff;
+
+  .nav {
+    float: right !important;
+    margin: 0;
+    padding: 0;
+    font-size: $font-size-small;
+    > li {
+      float: none;
+      > a {
+        padding-top: 0;
+        padding-bottom: 0;
+        line-height: $line-height-computed;
+        color: $navbar-default-link-color;
+        text-transform: capitalize;
+        &:hover,
+        &:focus {
+          color: $navbar-default-link-hover-color;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  .nav-social-links {
+    float: right !important;
+  }
+  
+  @media (min-width: $grid-float-breakpoint) {
+    .nav {
+      > li {
+        float: left;
+      }
+    }
+  }
+}

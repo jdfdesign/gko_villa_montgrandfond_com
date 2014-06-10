@@ -1,7 +1,0 @@
-@import url(wym_formatting.css);
-@import url(wym_theme.css);
-@import url(wym_iframe.css);
-/* line 4, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_cms3-6ae3dcc5d38b/gko_core/app/assets/stylesheets/gko_wym.css.scss */
-.wym_skin_gko .wym_iframe iframe {
-  background: #ccc;
-}
